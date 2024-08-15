@@ -1,5 +1,5 @@
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/sahilsi552/Tyromusics"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Surendra9123/ShraddhaBot"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 <h1 align="center">🎵 Aviax Music Bot 🎵</h1>
@@ -93,7 +93,7 @@ The Aviax Music Bot offers a range of commands to enhance your music listening e
 | `/stop`                 | Stop the bot and clear the queue.           |
 | `/queue`                | Display the list of songs in the queue.     |
 
-For a full list of commands, use `/help` in [telegram](https://t.me/AviaxBeatzBot).
+For a full list of commands, use `/help` in [Telegram](https://t.me/shraddhachat).
 
 ---
 
@@ -102,11 +102,8 @@ For a full list of commands, use `/help` in [telegram](https://t.me/AviaxBeatzBo
 Stay updated with the latest features and improvements to Aviax Music Bot:
 
 <p align="center">
-  <a href="https://telegram.me/AviaxSupport">
+  <a href="https://t.me/shraddhachat">
     <img src="https://img.shields.io/badge/Join-Support%20Group-blue?style=for-the-badge&logo=telegram">
-  </a>
-  <a href="https://telegram.me/AviaxOfficial">
-    <img src="https://img.shields.io/badge/Join-Update%20Channel-blue?style=for-the-badge&logo=telegram">
   </a>
 </p>
 
@@ -136,4 +133,3 @@ This project is licensed under the MIT License. For more details, see the [LICEN
 
 Special thanks to all the contributors, supporters, and users of the Aviax Music Bot. Your feedback and support keep us going!
 - [Yukki Music](https://github.com/TeamYukki/YukkiMusicBot) and [AnonXMusic](https://github.com/AnonymousX1025/AnonXMusic) For their Source Codes.
-
