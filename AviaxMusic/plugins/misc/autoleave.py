@@ -38,10 +38,11 @@ async def auto_leave():
                                     try:
                                         await client.leave_chat(i.chat.id)
                                         left += 1
-                                    except:
+                                    except Exception as e:
+                                        print(e)
                                         continue
-                except:
-                    pass
+                except Exception as e:
+                    print(e)
 
 
 asyncio.create_task(auto_leave())
