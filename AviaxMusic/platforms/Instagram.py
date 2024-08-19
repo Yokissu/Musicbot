@@ -8,8 +8,10 @@ from urllib.parse import urlparse
 username = config.INSTA_ID
 password = config.INSTA_PASS
 
+IGSUPPORT = config.IGSUPPORT
 cl = Client()
-cl.login(username,password)
+if IGSUPPORT:
+  cl.login(username,password)
 
 class InstaAPI:
   def __init__(self):
