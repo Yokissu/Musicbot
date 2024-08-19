@@ -23,7 +23,7 @@ INSTA_ID = getenv("INSTA_ID",None)
 INSTA_PASS = getenv("INSTA_PASS",None)
 # Chat id of a group for logging bot's activities
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", -1002036582074))
-
+IGSUPPORT = False
 # Get this value from @mnrobot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", None))
 
