@@ -282,12 +282,8 @@ async def song_download_cb(client, CallbackQuery, _):
     stype, format_id, vidid = callback_request.split("|")
     mystic = await CallbackQuery.edit_message_text(_["song_8"])
     yturl = f"https://www.youtube.com/watch?v={vidid}"
-    with yt_dlp.YoutubeDL({"quiet": True,"cookiefile" : "cookies.txt"}) as ytdl:
-        x = ytdl.extract_info(yturl, download=False)
-    title = (x["title"]).title()
-    title = re.sub("\W+", " ", title)
+    title, duration_min, duration_sec, thumbnail, vidid = await YouTube.details(yturl)
     thumb_image_path = await CallbackQuery.message.download()
-    duration = x["duration"]
     if stype == "video":
         thumb_image_path = await CallbackQuery.message.download()
         width = CallbackQuery.message.photo.width
@@ -304,7 +300,7 @@ async def song_download_cb(client, CallbackQuery, _):
             return await mystic.edit_text(_["song_9"].format(e))
         med = InputMediaVideo(
             media=file_path,
-            duration=duration,
+            duration=duration_sec,
             width=width,
             height=height,
             thumb=thumb_image_path,
@@ -338,7 +334,7 @@ async def song_download_cb(client, CallbackQuery, _):
             caption=title,
             thumb=thumb_image_path,
             title=title,
-            performer=x["uploader"],
+            performer=vidid,
         )
         await mystic.edit_text(_["song_11"])
         await app.send_chat_action(
