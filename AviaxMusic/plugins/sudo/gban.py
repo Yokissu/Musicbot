@@ -20,7 +20,7 @@ from AviaxMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
-@app.on_message(filters.command(["vgban", "vglobalban"]) & SUDOERS)
+@app.on_message(filters.command(["mgban", "mglobalban"]) & SUDOERS)
 @language
 async def global_ban(client, message: Message, _):
     if not message.reply_to_message:
@@ -68,7 +68,7 @@ async def global_ban(client, message: Message, _):
     await mystic.delete()
 
 
-@app.on_message(filters.command(["vungban"]) & SUDOERS)
+@app.on_message(filters.command(["mungban"]) & SUDOERS)
 @language
 async def global_un(client, message: Message, _):
     if not message.reply_to_message:
@@ -100,7 +100,7 @@ async def global_un(client, message: Message, _):
     await mystic.delete()
 
 
-@app.on_message(filters.command(["vgbannedusers", "vgbanlist"]) & SUDOERS)
+@app.on_message(filters.command(["mgbannedusers", "mgbanlist"]) & SUDOERS)
 @language
 async def gbanned_list(client, message: Message, _):
     counts = await get_banned_count()
