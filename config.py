@@ -7,14 +7,14 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "27737500"))
+API_HASH = getenv("API_HASH", "c0878ed3c0d82f1631e82b891908ee7b")
 
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://lucas:lucas88@cluster0.big6v.mongodb.net/?retryWrites=true&w=majority")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 90))
 SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION", 60*60))
@@ -22,16 +22,16 @@ SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", 60*60))
 INSTA_ID = getenv("INSTA_ID",None)
 INSTA_PASS = getenv("INSTA_PASS",None)
 # Chat id of a group for logging bot's activities
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", -1002036582074))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ))
 IGSUPPORT = False
 # Get this value from @mnrobot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", None))
+OWNER_ID = int(getenv("OWNER_ID", "6670354006"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account
-HEROKU_API_KEY = getenv("HEROKU_API_KEY")
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", "HRKU-370b9665-119f-4fc4-9083-7a4b6688c8e7")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
@@ -42,8 +42,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/userbot9")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/userbot9")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/kissuxbots")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/pwlived")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", True))
